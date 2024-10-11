@@ -80,6 +80,8 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 1.25em 0; /* Changed from 20px */
+    overflow-x: auto; /* Added for responsiveness */
+    display: block; /* Added for responsiveness */
 }
 table, th, td {
     border: 1px solid #ddd;
@@ -111,5 +113,30 @@ th {
     }
     th, td {
         padding: 0.5em; /* Changed from 8px */
+    }
+}
+
+@media (max-width: 480px) {
+    .headerpx {
+        font-size: 1em;
+    }
+    h2 {
+        font-size: 1.25em;
+    }
+    .filters {
+        gap: 0.3125em; /* Changed from 5px */
+    }
+    .filters select, .filters input {
+        padding: 0.5em; /* Changed from 8px */
+    }
+    .summary, .timeline {
+        padding: 0.5em; /* Changed from 8px */
+    }
+    th, td {
+        padding: 0.3125em; /* Changed from 5px */
+    }
+    table {
+        display: block; /* Added for responsiveness */
+        overflow-x: auto; /* Added for responsiveness */
     }
 }
