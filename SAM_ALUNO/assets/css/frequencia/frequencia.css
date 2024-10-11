@@ -242,6 +242,6 @@
     }
 
     .close {
-        font-size: 20px;
+        font-size: 20px; /* Ajusta o tamanho da fonte */
     }
 }
