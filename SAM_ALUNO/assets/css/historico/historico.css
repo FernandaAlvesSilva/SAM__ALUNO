@@ -1,142 +1,130 @@
-/*coteudo da pagina*/
+/* Conteúdo da página */
 
 .headerpx {
     background-color: #341e4e;
     color: white;
     border-radius: 10px;
     text-align: center;
-    padding: 1.25em; /* Changed from 20px */
+    padding: 1.25em; /* 20px */
 }
+
 .containerxx {
     max-width: 100%;
-    margin: 2em auto; /* Changed from 30px */
-    padding: 1.25em; /* Changed from 20px */
+    margin: 2em auto; /* 30px */
+    padding: 1.25em; /* 20px */
     border-radius: 8px;
     color: black;
     background-color: white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Ensure container is scrollable on small screens */
 }
+
 h2 {
     color: #341e4e;
-    margin-top: 1.25em; /* Changed from 20px */
-    margin-bottom: 1.25em; /* Changed from 20px */
+    margin-top: 1.25em; /* 20px */
+    margin-bottom: 1.25em; /* 20px */
 }
+
 .filters {
-    margin-bottom: 1.25em; /* Changed from 20px */
+    margin-bottom: 1.25em; /* 20px */
     display: flex;
     flex-wrap: wrap;
-    gap: 0.625em; /* Changed from 10px */
+    gap: 0.625em; /* 10px */
 }
+
 .filters select, .filters input {
     flex: 1;
-    padding: 0.625em; /* Changed from 10px */
+    padding: 0.625em; /* 10px */
     border-radius: 5px;
     border: none;
     background-color: #edeef7;
 }
+
 .summary, .timeline {
-    margin-bottom: 1.875em; /* Changed from 30px */
-    padding: 0.9375em; /* Changed from 15px */
+    margin-bottom: 1.875em; /* 30px */
+    padding: 0.9375em; /* 15px */
     background-color: #f5eeff;
 }
+
 .summary p {
-    margin: 0.3125em 0; /* Changed from 5px */
+    margin: 0.3125em 0; /* 5px */
 }
+
 .progress-bar {
     background-color: #E0F2F1;
     border-radius: 15px;
     overflow: hidden;
-    height: 1.5625em; /* Changed from 25px */
-    margin-top: 0.625em; /* Changed from 10px */
+    height: 1.5625em; /* 25px */
+    margin-top: 0.625em; /* 10px */
     box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.1);
 }
+
 .progress {
     height: 100%;
     background-color: #26A69A;
     color: white;
     font-weight: 500;
     text-align: center;
-    line-height: 1.5625em; /* Changed from 25px */
+    line-height: 1.5625em; /* 25px */
     border-radius: 15px;
 }
+
 .timeline {
     padding: 0;
     margin: 0;
+    margin-top: 1.25em; /* Added margin-top for spacing */
 }
+
 .timeline h3 {
     background-color: #341e4e;
     color: white;
-    padding: 0.625em; /* Changed from 10px */
+    padding: 0.625em; /* 10px */
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+
 .timeline-content {
-    background-color: #f0f0f0;
-    padding: 0.9375em; /* Changed from 15px */
+    padding: 0.9375em; /* 15px */
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    margin-bottom: 1.25em; /* Added margin-bottom for spacing */
 }
+
+.table-container {
+    overflow-x: auto;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1.25em 0; /* Changed from 20px */
-    overflow-x: auto; /* Added for responsiveness */
-    display: block; /* Added for responsiveness */
+    margin: 1.25em 0; /* 20px */
 }
+
 table, th, td {
     border: 1px solid #ddd;
 }
+
 th, td {
-    padding: 0.75em; /* Changed from 12px */
+    padding: 0.75em; /* 12px */
     text-align: left;
 }
+
 th {
     background-color: #341e4e;
     color: white;
 }
 
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+    .headerpx, .containerxx, .filters, .summary, .timeline {
+        padding: 1em; /* Adjust padding for smaller screens */
+    }
+
     .filters {
         flex-direction: column;
     }
-    .filters select, .filters input {
-        width: 100%;
-    }
-    .containerxx {
-        padding: 0.625em; /* Changed from 10px */
-    }
-    .headerpx {
-        padding: 0.625em; /* Changed from 10px */
-    }
-    .summary, .timeline {
-        padding: 0.625em; /* Changed from 10px */
-    }
-    th, td {
-        padding: 0.5em; /* Changed from 8px */
-    }
-}
 
-@media (max-width: 480px) {
-    .headerpx {
-        font-size: 1em;
-    }
-    h2 {
-        font-size: 1.25em;
-    }
-    .filters {
-        gap: 0.3125em; /* Changed from 5px */
-    }
-    .filters select, .filters input {
-        padding: 0.5em; /* Changed from 8px */
-    }
-    .summary, .timeline {
-        padding: 0.5em; /* Changed from 8px */
-    }
     th, td {
-        padding: 0.3125em; /* Changed from 5px */
-    }
-    table {
-        display: block; /* Added for responsiveness */
-        overflow-x: auto; /* Added for responsiveness */
+        padding: 0.5em; /* Adjust padding for smaller screens */
     }
 }
