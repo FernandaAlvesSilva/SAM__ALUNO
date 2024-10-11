@@ -12,11 +12,11 @@ h2 {
 .tablecontainer {
     width: 90%;
     margin: 20px auto;
-    overflow-x: auto; /* Adicionado para permitir rolagem horizontal em telas pequenas */
+    overflow-x: auto; /* Permitir rolagem horizontal em telas pequenas */
 }
 
 table {
-    width: 100%; /* Alterado para 100% para melhor ajuste em contêineres */
+    width: 100%; /* Ajuste para 100% para melhor ajuste em contêineres */
     margin: 80px auto;
     border-collapse: collapse;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -42,10 +42,11 @@ th {
 td {
     font-size: 1em;
     color: black;
+    cursor: pointer; /* Indicar que a célula é clicável */
 }
 
 .interval {
-    background-color: #6a1b9a; /* Sky Blue */
+    background-color: #6a1b9a; /* Purple */
     font-weight: bold;
     font-size: 1.2em;
     color: white;
@@ -57,27 +58,18 @@ td {
     color: #333;
 }
 
+/* Media query para telas pequenas */
 @media (max-width: 768px) {
-    table, th, td {
-        font-size: 0.8em;
-    }
     th, td {
-        padding: 10px;
+        padding: 10px; /* Reduzir o padding em telas pequenas */
+        font-size: 0.9em; /* Ajustar o tamanho da fonte em telas pequenas */
     }
-}
 
-@media (max-width: 480px) {
-    table, th, td {
-        font-size: 0.6em;
+    h2 {
+        font-size: 1.5em; /* Ajustar o tamanho da fonte do título em telas pequenas */
     }
-    th, td {
-        padding: 5px;
-    }
-    th, td {
-        display: block; /* Torna as células em blocos para melhor ajuste em telas muito pequenas */
-        width: 100%;
-    }
-    th {
-        text-align: left; /* Alinha o texto à esquerda para melhor legibilidade */
+
+    .tablecontainer {
+        width: 100%; /* Ajustar a largura do contêiner em telas pequenas */
     }
 }
