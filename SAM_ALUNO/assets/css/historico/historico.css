@@ -1,130 +1,141 @@
-/* Conteúdo da página */
-
-.headerpx {
-    background-color: #341e4e;
-    color: white;
-    border-radius: 10px;
-    text-align: center;
-    padding: 1.25em; /* 20px */
-}
-
 .containerxx {
-    max-width: 100%;
-    margin: 2em auto; /* 30px */
-    padding: 1.25em; /* 20px */
-    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
     color: black;
     background-color: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow-x: auto; /* Ensure container is scrollable on small screens */
 }
 
-h2 {
-    color: #341e4e;
-    margin-top: 1.25em; /* 20px */
-    margin-bottom: 1.25em; /* 20px */
+.headerpx {
+    text-align: center;
+    color: #333;
 }
 
-.filters {
-    margin-bottom: 1.25em; /* 20px */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.625em; /* 10px */
-}
-
-.filters select, .filters input {
-    flex: 1;
-    padding: 0.625em; /* 10px */
-    border-radius: 5px;
-    border: none;
-    background-color: #edeef7;
-}
-
-.summary, .timeline {
-    margin-bottom: 1.875em; /* 30px */
-    padding: 0.9375em; /* 15px */
-    background-color: #f5eeff;
+.summary {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 .summary p {
-    margin: 0.3125em 0; /* 5px */
+    margin: 10px 0;
 }
 
 .progress-bar {
-    background-color: #E0F2F1;
-    border-radius: 15px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
     overflow: hidden;
-    height: 1.5625em; /* 25px */
-    margin-top: 0.625em; /* 10px */
-    box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
 }
 
 .progress {
-    height: 100%;
-    background-color: #26A69A;
+    background-color: #4caf50;
     color: white;
-    font-weight: 500;
     text-align: center;
-    line-height: 1.5625em; /* 25px */
-    border-radius: 15px;
+    padding: 5px 0;
+    border-radius: 8px;
 }
 
-.timeline {
-    padding: 0;
-    margin: 0;
-    margin-top: 1.25em; /* Added margin-top for spacing */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.timeline h3 {
-    background-color: #341e4e;
-    color: white;
-    padding: 0.625em; /* 10px */
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+.filters div {
+    flex: 1;
+    margin-right: 10px;
+    min-width: 150px;
 }
 
-.timeline-content {
-    padding: 0.9375em; /* 15px */
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    margin-bottom: 1.25em; /* Added margin-bottom for spacing */
+.filters div:last-child {
+    margin-right: 0;
+}
+
+.filters label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filters select,
+.filters input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .table-container {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Suaviza a rolagem no mobile */
+    width: 100%; /* Para garantir que a rolagem ocupe o espaço inteiro */
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1.25em 0; /* 20px */
+    margin-bottom: 20px;
 }
 
-table, th, td {
+table th,
+table td {
     border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 0.75em; /* 12px */
+    padding: 8px;
     text-align: left;
+    white-space: nowrap; /* Para evitar quebra de texto nas células */
 }
 
-th {
-    background-color: #341e4e;
-    color: white;
+table th {
+    background-color: #f2f2f2;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .headerpx, .containerxx, .filters, .summary, .timeline {
-        padding: 1em; /* Adjust padding for smaller screens */
-    }
+.approved {
+    color: green;
+}
 
+.failed {
+    color: red;
+}
+
+.timeline {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.timeline h3 {
+    margin-top: 0;
+}
+
+.timeline-content {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
     .filters {
         flex-direction: column;
     }
 
-    th, td {
-        padding: 0.5em; /* Adjust padding for smaller screens */
+    .filters div {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .filters div:last-child {
+        margin-bottom: 0;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    table th,
+    table td {
+        padding: 5px;
     }
 }
