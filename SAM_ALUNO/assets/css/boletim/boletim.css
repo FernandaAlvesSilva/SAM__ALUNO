@@ -1,8 +1,6 @@
-/*Conteúdo da página*/
-
+/* Conteúdo da página */
 .student-info {
     width: 85%;
-    margin: 30px;
     margin: 30px;
     padding: 20px;
     background-color: #fff;
@@ -75,8 +73,7 @@
     transform: translateY(-2px); /* Eleva o botão no hover */
 }
 
-/*tabela*/
-
+/* Tabela */
 .module-selection table {
     width: 100%;
     border-collapse: collapse;
@@ -110,7 +107,7 @@
     color: #0a0a0a;
 }
 
-/* modal pop up */
+/* Modal pop-up */
 .modal {
     display: none;
     position: fixed;
@@ -122,6 +119,18 @@
     overflow: hidden; /* Remove a rolagem da página quando o modal está aberto */
     background-color: rgba(0, 0, 0, 0.6); /* Aumenta a opacidade do fundo */
     backdrop-filter: blur(5px); /* Adiciona um efeito de desfoque ao fundo */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* Ajusta a margem para centralizar melhor o modal */
+    padding: 30px; /* Aumenta o padding para mais espaço interno */
+    border: none; /* Remove a borda padrão */
+    width: 60%; /* Ajusta a largura do modal */
+    max-width: 600px; /* Define uma largura máxima */
+    border-radius: 12px; /* Bordas mais arredondadas */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais suave */
+    animation: fadeIn 0.3s ease-out; /* Adiciona uma animação de fade-in */
 }
 
 .modal-content a {
@@ -154,18 +163,6 @@
     margin-bottom: 20px;
 }
 
-.modal-content {
-    background-color: #fff;
-    margin: 10% auto; /* Ajusta a margem para centralizar melhor o modal */
-    padding: 30px; /* Aumenta o padding para mais espaço interno */
-    border: none; /* Remove a borda padrão */
-    width: 60%; /* Ajusta a largura do modal */
-    max-width: 600px; /* Define uma largura máxima */
-    border-radius: 12px; /* Bordas mais arredondadas */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais suave */
-    animation: fadeIn 0.3s ease-out; /* Adiciona uma animação de fade-in */
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -192,14 +189,8 @@
     text-decoration: none;
 }
 
-/* Responsiveness */
+/* Responsividade */
 @media (max-width: 768px) {
-    main {
-        padding: 20px;
-        margin-top: 20px;
-        margin-left: 0;
-    }
-
     .student-info, .module-selection {
         width: 100%;
         margin: 10px 0;
@@ -208,33 +199,52 @@
 
     .module-selection select {
         width: 100%;
-        margin-bottom: 20px;
+        margin-right: 0;
     }
 
     .module-selection button {
         width: 100%;
         margin-left: 0;
     }
+
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .module-selection table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .module-selection th, .module-selection td {
+        white-space: nowrap;
+    }
 }
 
+@media (max-width: 480px) {
+    .student-info h2 {
+        font-size: 18px;
+    }
 
-/* Responsiveness for modal */
-@media (max-width: 768px) {
-    .modal-content {
-        width: 90%; /* Ajusta a largura do modal para telas menores */
-        padding: 20px; /* Reduz o padding para telas menores */
+    .student-info p {
+        font-size: 10px;
+    }
+
+    .module-selection label {
+        font-size: 14px;
+    }
+
+    .module-selection th, .module-selection td {
+        font-size: 12px;
     }
 
     .modal-content h2 {
-        font-size: 20px; /* Ajusta o tamanho da fonte para telas menores */
+        font-size: 20px;
     }
 
-    .modal-content p,
-    .modal-content li {
-        font-size: 14px; /* Ajusta o tamanho da fonte para telas menores */
-    }
-
-    .close {
-        font-size: 20px; /* Ajusta o tamanho da fonte do botão de fechar para telas menores */
+    .modal-content p, .modal-content li {
+        font-size: 14px;
     }
 }
