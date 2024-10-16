@@ -54,7 +54,7 @@ O **SAM** é um sistema acadêmico desenvolvido para facilitar a gestão escolar
 
 ### Tecnologias Utilizadas
 - **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Node.js, Express
+- **Backend:** PHP
 - **Banco de Dados:** MySQL
 - **Design Responsivo:** Implementação para desktop e acessível via dispositivos móveis.
 
